@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f5f5f5; /* Fundo cinza claro */
+    color: #37474f; /* Texto em cor cinza escuro */
+   }
+   .home-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+   }
+   .highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que os itens se reorganizem em várias linhas */
+    margin-top: 40px;
+   }
+   .highlight {
+    text-align: center;
+    max-width: 300px;
+    margin-bottom: 20px; /* Espaço entre as linhas */
+    text-decoration: none; /* Remove underline dos links */
+    color: inherit; /* Mantém a cor do texto */
+   }
+   .highlight img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s; /* Adiciona a transição suave */
+   }
+   .highlight:hover img {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+   }
+   .highlight h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+   }
+   .highlight p {
+    font-size: 1rem;
+    color: #666;
+   }
+   .news-section {
+    margin-top: 40px;
+   }
+   .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre as colunas */
+   }
+   .news-item {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 20px); /* Cada item ocupa metade da largura, menos a margem */
+    margin-bottom: 20px;
+    text-decoration: none; /* Remove underline dos links */
+    color: inherit; /* Mantém a cor do texto */
+    transition: transform 0.3s; /* Adiciona a transição suave */
+   }
+   .news-item:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente o item ao passar o mouse */
+   }
+   .news-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s; /* Adiciona a transição suave */
+   }
+   .news-item:hover .news-image {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+   }
+   .news-item h3 {
+    font-size: 1.25rem;
+    color: #333;
+   }
+   .news-item p {
+    font-size: 1rem;
+    color: #666;
+   }
+   
