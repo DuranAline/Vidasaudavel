@@ -5,7 +5,7 @@ import VitalSigns from './Pages/SinaisVitais';
 import Activities from './Pages/Atividades';
 import Nutrition from './Pages/Alimentacao';
 import Register from './Pages/Register';
-//import Login from './Pages/Login';
+
 import { RequireAuth } from './components/RequireAuth';
 import Login from './Pages/Login';
 

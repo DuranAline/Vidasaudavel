@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
-import { AuthProvider } from './context/AuthContext.tsx';
-import { UserProvider } from './context/UserContet.tsx';
+import { AuthProvider } from './context/AuthContext';
+import { UserProvider } from './context/UserContet';
 
 
 

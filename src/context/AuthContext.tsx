@@ -18,7 +18,7 @@ interface AuthContextType {
 }
 
 
-const AuthContext = createContext<AuthContextType | null>(null);
+export const AuthContext = createContext<AuthContextType | null>(null);
 
 
 interface AuthProviderProps {
