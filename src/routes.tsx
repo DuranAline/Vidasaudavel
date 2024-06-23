@@ -5,9 +5,10 @@ import VitalSigns from './Pages/SinaisVitais';
 import Activities from './Pages/Atividades';
 import Nutrition from './Pages/Alimentacao';
 import Register from './Pages/Register';
-
+import NotFound from './Pages/NotFound/NotFound';
 import { RequireAuth } from './components/RequireAuth';
 import Login from './Pages/Login';
+
 
 
 export const router = createBrowserRouter([
@@ -55,4 +56,9 @@ export const router = createBrowserRouter([
    path: '/login',
    element: <Login />,
  },
+ {
+  path: '*',
+  element: <NotFound />,
+ },
+
 ]);

@@ -1,0 +1,25 @@
+/* src/pages/NotFound/style.css */
+.not-found-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.not-found-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.not-found-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.not-found-button-container {
+  margin-top: 20px;
+}
