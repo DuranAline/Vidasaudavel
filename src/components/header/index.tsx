@@ -19,6 +19,18 @@ export function Header() {
     }
   };
 
+  const getUserIcon = () => {
+    if (!user) {
+      return '/images/ano.png';
+    } else if (user.gender === 'female') {
+      return '/images/girl.png';
+    } else if (user.gender === 'male') {
+      return '/images/boy.png';
+    } else {
+      return '/images/ano.png';
+    }
+  };
+
   return (
     <header className="header">
       <Navbar bg="light" expand="lg">
@@ -39,11 +51,14 @@ export function Header() {
                 {/* Adicione outros itens do dropdown aqui */}
               </NavDropdown>
             </Nav>
-            {user ? (
-              <button onClick={handleLogout} className="btn btn-outline-danger">Logout</button>
-            ) : (
-              <Link className="btn btn-outline-success" to="/login">Login</Link>
-            )}
+            <div className="user-info d-flex align-items-center">
+              <img src={getUserIcon()} alt="User Icon" className="user-icon" />
+              {user ? (
+                <button onClick={handleLogout} className="btn btn-outline-danger ms-2">Logout</button>
+              ) : (
+                <Link className="btn btn-outline-success ms-2" to="/login">Login</Link>
+              )}
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
