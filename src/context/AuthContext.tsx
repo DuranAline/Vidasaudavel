@@ -14,7 +14,7 @@ interface AuthContextType {
   register: (email: string, password: string, name: string, gender: 'male' | 'female') => Promise<void>;
 }
 
-const AuthContext = createContext<AuthContextType | null>(null);
+export const AuthContext = createContext<AuthContextType | null>(null);
 
 interface AuthProviderProps {
   children: ReactNode;

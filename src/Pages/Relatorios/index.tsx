@@ -1,9 +1,8 @@
+// src/pages/Relatorios/index.tsx
 import { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
-//import { fetchReportsData } from '../../services/dataService';
-//import './Style.css';
-import './style.css';
 import { fetchReportsData } from '../../services/dataService';
+import './style.css';
 
 
 interface ReportData {
