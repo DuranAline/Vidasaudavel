@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import './header.css';
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
 export function Header() {
   const { user, logout } = useAuth();
@@ -20,41 +21,32 @@ export function Header() {
 
   return (
     <header className="header">
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container-fluid">
-          <Link className="navbar-brand d-flex align-items-center" to="/">
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
             <img src="/images/logo.png" alt="Logo" className="logo" />
             <span>VidaSaudável</span>
-          </Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link" to="/atividades">Atividades</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/alimentacao">Alimentação</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/relatorios">Relatórios</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/sinais-vitais">Sinais Vitais</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/cadastro">Cadastro</Link>
-              </li>
-            </ul>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/atividades">Atividades</Nav.Link>
+              <Nav.Link as={Link} to="/alimentacao">Alimentação</Nav.Link>
+              <Nav.Link as={Link} to="/relatorios">Relatórios</Nav.Link>
+              <Nav.Link as={Link} to="/sinais-vitais">Sinais Vitais</Nav.Link>
+              <NavDropdown title="Mais" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/cadastro">Cadastro</NavDropdown.Item>
+                {/* Adicione outros itens do dropdown aqui */}
+              </NavDropdown>
+            </Nav>
             {user ? (
               <button onClick={handleLogout} className="btn btn-outline-danger">Logout</button>
             ) : (
               <Link className="btn btn-outline-success" to="/login">Login</Link>
             )}
-          </div>
-        </div>
-      </nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 }
